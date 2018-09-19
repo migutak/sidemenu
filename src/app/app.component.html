@@ -1,21 +1,353 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="page-wrapper chiller-theme toggled">
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div id="toggle-sidebar">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="sidebar-brand">
+        <a href="#">E-Collect&reg;</a>
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" src="assets/img/user.jpg" alt="User picture">
+        </div>
+        <div class="user-info">
+          <span class="user-name">Jhon
+            <strong>Smith</strong>
+          </span>
+          <span class="user-role">Administrator</span>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
+        </div>
+      </div>
+      <!-- sidebar-header  -->
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span>Menu</span>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-dashboard"></i>
+              <span>Dashboard</span>
+              <span class="label label-danger">New</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a routerLink="dashboard" routerLinkActive="active-link">Summary Dashboard</a>
+                </li>
+                <li>
+                  <a routerLink="regionaldashboard" routerLinkActive="active-link">Regional Dashboard</a>
+                </li>
+                <li>
+                  <a routerLink="par" routerLinkActive="active-link">Portfolio-at-Risk</a>
+                </li>
+                <li>
+                  <a routerLink="activitydashboard" routerLinkActive="active-link">Activity Dashboard</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-shopping-cart"></i>
+              <span>Work Queue</span>
+              <span class="badge">3</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a routerLink="#">Today's Work
+                    <span class="badge">2</span>
+                  </a>
+                </li>
+                <li>
+                  <a routerLink="#">My Worklist
+                    <span class="badge">2</span>
+                  </a>
+                </li>
+                <li>
+                  <a routerLink="#">My Allocations
+                    <span class="badge">2</span>
+                  </a>
+                </li>
+                <li>
+                  <a routerLink="#">View all
+                    <span class="badge">2</span>
+                  </a>
+                </li>
+                <li>
+                  <a routerLink="#">With funds
+                    <span class="badge">2</span>
+                  </a>
+                </li>
+                <li>
+                  <a routerLink="#">PTPs
+                    <span class="badge">2</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-diamond"></i>
+              <span>Paying - Watch</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">No Credit Buildup</a>
+                </li>
+                <li>
+                  <a href="#">Credit build watch</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-bar-chart-o"></i>
+              <span>Reports</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Collector activity</a>
+                </li>
+                <li>
+                  <a href="#">Amount collected</a>
+                </li>
+                <li>
+                  <a href="#">SMS Report</a>
+                </li>
+                <li>
+                  <a href="#">Daily notes</a>
+                </li>
+              </ul>
+            </div>
+          </li>
 
-<router-outlet></router-outlet>
+          <li class="header-menu">
+            <span>Remedial</span>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-globe"></i>
+              <span>CMD</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Credit cards</a>
+                </li>
+                <li>
+                  <a href="#">Write offs</a>
+                </li>
+                <li>
+                  <a href="#">CMD Cr/Zero Balance</a>
+                </li>
+                <li>
+                  <a href="#">Cards Cr/Zero Balance</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-globe"></i>
+              <span>Service Providers</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Auctioneers</a>
+                </li>
+                <li>
+                  <a href="#">Marketors</a>
+                </li>
+                <li>
+                  <a href="#">Repossessors</a>
+                </li>
+                <li>
+                  <a href="#">Investigators</a>
+                </li>
+                <li>
+                  <a href="#">Debt Collectors</a>
+                </li>
+                <li>
+                  <a href="#">Valuers</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-globe"></i>
+              <span>Payments</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Invoices</a>
+                </li>
+                <li>
+                  <a href="#">Payment History</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-globe"></i>
+              <span>Remedial reports</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Unactioned report</a>
+                </li>
+                <li>
+                  <a href="#">New File Analysis</a>
+                </li>
+                <li>
+                  <a href="#">Portfolio Movement</a>
+                </li>
+                <li>
+                  <a href="#">Relegation Analysis</a>
+                </li>
+                <li>
+                  <a href="#">Incoices</a>
+                </li>
+                <li>
+                  <a href="#">Portfolio movt CC</a>
+                </li>
+                <li><a>Relegation analysis CC</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="header-menu">
+            <span>Extras</span>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-globe"></i>
+              <span>Team Leader Review</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a routerLinkActive="active-link">Review-Loans</a>
+                </li>
+                <li>
+                  <a routerLinkActive="active-link">Review-Cards</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-globe"></i>
+              <span>Settings</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a routerLink="arocode" routerLinkActive="active-link">ARO/RRO Codes</a>
+                </li>
+                <li>
+                  <a routerLink="regional" routerLinkActive="active-link">Regional</a>
+                </li>
+                <li>
+                  <a routerLink="branches" routerLinkActive="active-link">Branches</a>
+                </li>
+                <li>
+                  <a routerLink="memo" routerLinkActive="active-link">Memo Groups</a>
+                </li>
+                <li>
+                  <a routerLink="importfiles" routerLinkActive="active-link">Import Files</a>
+                </li>
+                <li>
+                  <a routerLink="bucket" routerLinkActive="active-link">Bucket</a>
+                </li>
+                <li>
+                  <a routerLink="branch-managers" routerLinkActive="active-link">Branch Managers</a>
+                </li>
+                <li>
+                  <a routerLink="service-providers" routerLinkActive="active-link">Service Providers</a>
+                </li>
+                <li>
+                  <a routerLink="bank-regions" routerLinkActive="active-link">Bank Regions</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-book"></i>
+              <span>Manual</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Collection call plan scripts</a>
+                </li>
+                <li>
+                  <a href="#">Collection customer visit</a>
+                </li>
+                <li>
+                  <a href="#">Decision tree</a>
+                </li>
+                <li>
+                  <a href="#">Loan process flow</a>
+                </li>
+                <li>
+                  <a href="#">PBO handover guideline</a>
+                </li>
+                <li>
+                  <a href="#">Account plans</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a routerLink="/themes" routerLinkActive="active-link">
+              <i class="fa fa-book"></i>
+              <span>Themes</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    <div class="sidebar-footer">
+      <a href="#">
+        <i class="fa fa-bell"></i>
+        <span class="label label-warning notification">3</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-envelope"></i>
+        <span class="label label-success notification">7</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-gear"></i>
+        <span class="badge-sonar"></span>
+      </a>
+      <a href="#">
+        <i class="fa fa-power-off"></i>
+      </a>
+    </div>
+  </nav>
+  <!-- sidebar-wrapper  -->
+  <main class="page-content">
+    <router-outlet></router-outlet>
+  </main>
+  <!-- page-content" -->
+</div>
