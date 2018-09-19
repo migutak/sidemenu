@@ -26,13 +26,13 @@
             </thead>
             <tbody>
               <tr *ngFor="let d of AttData">
-                <td>{{d.BRANCHCODE}}</td>
-                <td>{{d.BRANCHNAME}}</td>
-                <td>{{d.REGPORTFOLIO}}</td>
-                <td>{{d.REGSME}}</td>
-                <td>{{d.REGMICROCREDIT}}</td>
-                <td>{{d.REGASSETFINANCE}}</td>
-                <td><a href="#/editbranch/{{d.BRANCHCODE}}">Edit</a></td>
+                <td>{{d.branchcode}}</td>
+                <td>{{d.branchname}}</td>
+                <td>{{d.regportfolio}}</td>
+                <td>{{d.regsme}}</td>
+                <td>{{d.regmicrocredit}}</td>
+                <td>{{d.regassetinance}}</td>
+                <td><a routerLink="/editbranch/{{d.branchcode}}">Edit</a></td>
               </tr>
             </tbody>
           </table>

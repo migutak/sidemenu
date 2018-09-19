@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { RegionaldashboardComponent } from './dashboard/regionaldashboard/region
 import { ParComponent } from './dashboard/par/par.component';
 import { ActivitydashboardComponent } from './dashboard/activitydashboard/activitydashboard.component';
 import { BranchesComponent } from './settings/branches/branches.component';
+import { EditbranchesComponent } from './settings/editbranches/editbranches.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { BranchesComponent } from './settings/branches/branches.component';
     RegionaldashboardComponent,
     ParComponent,
     ActivitydashboardComponent,
-    BranchesComponent
+    BranchesComponent,
+    EditbranchesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgxChartsModule
+    NgxChartsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

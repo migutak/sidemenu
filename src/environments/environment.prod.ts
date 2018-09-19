@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  ecol_apis: 'http://localhost:3000'
 };

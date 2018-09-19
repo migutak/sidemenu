@@ -6,6 +6,7 @@ import { RegionaldashboardComponent } from './dashboard/regionaldashboard/region
 import { ParComponent } from './dashboard/par/par.component';
 import { ActivitydashboardComponent } from './dashboard/activitydashboard/activitydashboard.component';
 import { BranchesComponent } from './settings/branches/branches.component';
+import { EditbranchesComponent } from './settings/editbranches/editbranches.component';
 
 const routes: Routes = [
   { path: '',  redirectTo: '/dashboard', pathMatch: 'full' },
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'branches',
     component: BranchesComponent
+  },
+  {
+    path: 'editbranch/:branchcode',
+    component: EditbranchesComponent
   }
 ];
 
