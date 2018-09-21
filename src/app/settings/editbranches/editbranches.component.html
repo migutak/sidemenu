@@ -1,3 +1,68 @@
-<p>
-  editbranches works!
-</p>
+<!-- begin breadcrumb -->
+<ol class="breadcrumb pull-right">
+  <li class="breadcrumb-item">
+    <a href="javascript:;">Home</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="javascript:;">Settings</a>
+  </li>
+  <li class="breadcrumb-item active">Branches</li>
+</ol>
+<!-- end breadcrumb -->
+<!-- begin page-header -->
+<h1 class="page-header">Edit Branch
+  <small>Regional allocations</small>
+</h1>
+<!-- end page-header -->
+
+<!-- begin row -->
+<div class="container row">
+  <div class="col-lg-12">
+    <div class="col-md-12 panel">
+      <div class="col-md-12 panel-body" style="padding-bottom:30px;">
+        <form class="cmxform" ng-submit="editBranch()">
+          <div class="col-md-12">
+            <div class="form-group" style="margin-top:40px !important;">
+              <input type="text" class="form-control" id="branchid" name="branchid" ng-model="dataIn.branchid" readonly="readonly">
+            </div>
+            <div class="form-group" style="margin-top:40px !important;">
+              <input type="text" class="form-control" id="branchname" name="branchname" ng-model="dataIn.branchname" readonly="readonly">
+            </div>
+            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+              <select id="sme" name="sme" class="form-control" ng-model="dataIn.sme" required>
+                <option *ngFor="let u of users">{{u.USERNAME}}</option>
+              </select>
+              <span class="bar"></span>
+              <div>Collector SME</div>
+            </div>
+            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+              <select id="portfolio" name="portfolio" class="form-control" ng-model="dataIn.portfolio" required>
+                <option *ngFor="let u of users">{{u.USERNAME}}</option>
+              </select>
+              <span class="bar"></span>
+              <div>Collector Portfolio</div>
+            </div>
+            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+              <select id="mcu" name="mcu" class="form-control" ng-model="dataIn.mcu" required>
+                <option *ngFor="let u of users">{{u.USERNAME}}</option>
+              </select>
+              <span class="bar"></span>
+              <div>Collector MCU</div>
+            </div>
+            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+              <select id="assetfinance" name="assetfinance" class="form-control" ng-model="dataIn.assetfinance" required>
+                <option *ngFor="let u of users">{{u.USERNAME}}</option>
+              </select>
+              <span class="bar"></span>
+              <div>Collector Asset Finance</div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-primary btn-flat">Submit</button>
+            <a class="btn btn-danger btn-flat" routerLink="/branches">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

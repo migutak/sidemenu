@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-editbranches',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditbranchesComponent implements OnInit {
 
-  constructor() { }
+  branchcode: string;
+  users: any = [];
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.branchcode = params.branchcode;
+      console.log('in branchcode = ' + this.branchcode);
+    });
   }
 
 }
